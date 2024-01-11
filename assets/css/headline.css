@@ -1,0 +1,18 @@
+.headline {
+  font-size: 4rem;
+  line-height: 100vh;
+
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+}
+.headline__letter {
+  opacity: 0;
+  transition: 0.5s ease;
+  display: inline-block;
+  transform: translateY(50px);
+}
+.headline--animated {
+  opacity: 1;
+  transform: translateY(0);
+}/*# sourceMappingURL=headline.css.map */

@@ -1,0 +1,102 @@
+/********************NOT IMPORTANT********************/
+
+@import "https://cdn.jsdelivr.net/npm/compass-mixins@0.12.12/+esm";
+
+$red: red;
+
+body{
+  background: #000;
+  font-family: 'Oswald', sans-serif;
+  curser: alias;
+}
+
+#text {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h2{
+  color: #fff;
+  font-size: 47px;
+  line-height: 40px;
+}
+
+a{
+  color: #808080;
+  text-decoration: none;
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+  text-align: center;
+  curser: pointer;
+  letter-spacing: 6px;
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover{
+  color: #fff;
+  letter-spacing: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+#testdiv{
+  width: auto;
+  height: auto;
+  padding: 15px;
+  background-color: #fff;
+  position: absolute;
+  left: 4%;
+  top: 70px;
+}
+
+.bg{
+  height: 100vh;
+  width: 100%;
+}
+
+/********************IMPORTANT SHIT STARTS HERE********************/
+
+.abs-center{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   @include transform(translate(-50%, -50%));
+}
+
+.custom-cursor{
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   position: absolute;
+   z-index: 900;
+   top: -40px;
+   left: -40px;
+   pointer-events: none; 
+   //-webkit-mix-blend-mode: hard-light;
+   //mix-blend-mode: hard-light;
+}
+
+.cursor__small{
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: $red;   
+   z-index: 5;   
+   margin: -5px 0 0 -5px;
+}
+
+.cursor__big{
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   border: $red 2px solid;
+   z-index: 1;   
+   opacity: 1;
+   margin: -40px 0 0 -40px;
+   @include transform(scale(0));
+   @include transition(all 320ms cubic-bezier(.26,.01,.17,1));
+  
+}
